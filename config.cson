@@ -1,0 +1,15 @@
+"*":
+  "atom-ide-ui":
+    "atom-ide-code-format":
+      formatOnSave: true
+  "exception-reporting":
+    userId: "cb68204a-e0df-47d0-a8dd-2887e48c0e32"
+  "linter-ui-default": {}
+  "platformio-ide-terminal":
+    core:
+      workingDirectory: "Active File"
+    style:
+      fontSize: "18"
+      theme: "homebrew"
+  "vim-mode-plus":
+    useClipboardAsDefaultRegister: true

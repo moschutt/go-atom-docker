@@ -1,0 +1,29 @@
+version: "3.2"
+services:
+  atom:
+    container_name: atom
+    build: 
+      context: .
+      dockerfile: "Dockerfile.atom"
+    volumes:
+      - "/dev/shm:/dev/shm"
+      - "/tmp/.X11-unix:/tmp/.X11-unix/"
+    ports:
+      - 6060:6060
+      - 8000:8000
+    environment:
+      - "DISPLAY"
+  go-atom:
+    container_name: go
+    build:
+      context: .
+      dockerfile: "Dockerfile.go"
+    volumes:
+      - "/dev/shm:/dev/shm"
+      - "/tmp/.X11-unix:/tmp/.X11-unix/"
+      - "/home/mark/devel/go/:/home/atom/go"
+    ports:
+      - 6060:6060
+      - 8000:8000
+    environment:
+      - "DISPLAY"
